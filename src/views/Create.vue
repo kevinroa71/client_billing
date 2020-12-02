@@ -1,16 +1,16 @@
 <template>
   <div class="home row justify-content-center">
-    <BillingTable></BillingTable>
+    <CreateForm></CreateForm>
   </div>
 </template>
 
 <script>
-import BillingTable from "../components/BillingTable";
+import CreateForm from "../components/CreateForm";
 
 export default {
-  name: 'Home',
+  name: 'Create',
   components: {
-    BillingTable
+    CreateForm
   }
 }
 </script>

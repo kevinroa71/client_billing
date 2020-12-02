@@ -34,9 +34,9 @@
         </table>
         <nav aria-label="nav-bottom">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#" @click="previous">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#" @click="previous()">Previous</a></li>
                 <li :class="['page-item', { 'active': i == page }]" v-for="i in totalPages" :key="'page-'+i"><a class="page-link" href="#" @click="loadBillings(i)">{{i}}</a></li>
-                <li class="page-item"><a class="page-link" href="#" @click="next">Next</a></li>
+                <li class="page-item"><a class="page-link" href="#" @click="next()">Next</a></li>
             </ul>
         </nav>
     </div>
@@ -77,12 +77,12 @@ export default {
         },
         previous() {
             if (this.page > 1) {
-                this.loadBillings(this.page--);
+                this.loadBillings(this.page-1);
             }
         },
         next() {
             if (this.page < this.totalPages) {
-                this.loadBillings(this.page++);
+                this.loadBillings(this.page+1);
             }
         }
     }

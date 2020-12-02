@@ -12,8 +12,11 @@
                     <li class="nav-item">
                         <router-link to="/" class="nav-link"><em class="fas fa-tachometer-alt"></em> Dashboard</router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link to="/create" class="nav-link"><em class="fas fa-file-invoice-dollar"></em> Create Billing</router-link>
+                    </li>
                     <li class="nav-item" v-if="!hasToken">
-                        <router-link to="/registro" class="nav-link"><em class="fas fa-unlock"></em> Login</router-link>
+                        <router-link to="/register" class="nav-link"><em class="fas fa-unlock"></em> Login</router-link>
                     </li>
                 </ul>
                 <button v-if="hasToken" class="btn btn-outline-light my-2 my-sm-0" @click="logout"><em class="fas fa-arrow-alt-circle-left"></em> Logout</button>
